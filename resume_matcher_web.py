@@ -12,7 +12,7 @@ EMB_MODEL_ID = 'all-MiniLM-L6-v2'
 
 # Use Streamlit secrets for your Hugging Face token!
 HF_TOKEN = st.secrets["HF_TOKEN"] if "HF_TOKEN" in st.secrets else os.environ.get("HF_TOKEN", "")
-HF_MODEL_URL = "https://api-inference.huggingface.co/models/google/flan-t5-large"  # You can swap to another if rate limited
+HF_MODEL_URL = "https://api-inference.huggingface.co/models/sshleifer/tiny-gpt2"  # You can swap to another if rate limited
 
 # --------- Download/Cache Embedding Model ---------
 @st.cache_resource(show_spinner=True)
