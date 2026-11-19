@@ -1,6 +1,7 @@
-streamlit
+streamlit>=1.45
 sentence-transformers
-scikit-learn
+numpy
+pandas
 pypdf
 python-docx
 requests
