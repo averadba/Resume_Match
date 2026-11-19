@@ -30,6 +30,10 @@ DEFAULT_LLM = "meta-llama/Llama-3.1-8B-Instruct"
 CHUNK_WORDS = 150  # MiniLM truncates ~256 tokens, so embed in chunks
 CHUNK_OVERLAP = 30
 
+# Use Streamlit secrets for your Hugging Face token!
+HF_TOKEN = st.secrets["HF_TOKEN"] if "HF_TOKEN" in st.secrets else os.environ.get("HF_TOKEN", "")
+HF_MODEL_URL = "https://router.huggingface.co/hf-inference/models/mistralai/Mistral-7B-Instruct-v0.2"  # You can swap to another if rate limited
+
 
 def get_hf_token() -> str:
     try:
